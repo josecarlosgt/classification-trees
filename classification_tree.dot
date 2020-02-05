@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<grade_A &le; 0.5<br/>gini = 0.5<br/>samples = 27780<br/>value = [13959, 13821]<br/>class = -1>, fillcolor="#fffefd"] ;
+1 [label=<grade_B &le; 0.5<br/>gini = 0.496<br/>samples = 23883<br/>value = [13002, 10881]<br/>class = -1>, fillcolor="#fbeadf"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<total_rec_late_fee &le; 0.175<br/>gini = 0.48<br/>samples = 16300<br/>value = [9793, 6507]<br/>class = -1>, fillcolor="#f6d5bd"] ;
+1 -> 2 ;
+3 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 3 ;
+18 [label="(...)", fillcolor="#C0C0C0"] ;
+2 -> 18 ;
+31 [label=<total_rec_late_fee &le; 0.005<br/>gini = 0.488<br/>samples = 7583<br/>value = [3209, 4374]<br/>class = +1>, fillcolor="#cae5f8"] ;
+1 -> 31 ;
+32 [label="(...)", fillcolor="#C0C0C0"] ;
+31 -> 32 ;
+47 [label="(...)", fillcolor="#C0C0C0"] ;
+31 -> 47 ;
+58 [label=<total_rec_late_fee &le; 7.422<br/>gini = 0.371<br/>samples = 3897<br/>value = [957, 2940]<br/>class = +1>, fillcolor="#79bded"] ;
+0 -> 58 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+59 [label=<dti &le; 16.725<br/>gini = 0.353<br/>samples = 3771<br/>value = [862, 2909]<br/>class = +1>, fillcolor="#74baed"] ;
+58 -> 59 ;
+60 [label="(...)", fillcolor="#C0C0C0"] ;
+59 -> 60 ;
+75 [label="(...)", fillcolor="#C0C0C0"] ;
+59 -> 75 ;
+88 [label=<revol_util &le; 86.75<br/>gini = 0.371<br/>samples = 126<br/>value = [95, 31]<br/>class = -1>, fillcolor="#edaa7a"] ;
+58 -> 88 ;
+89 [label="(...)", fillcolor="#C0C0C0"] ;
+88 -> 89 ;
+98 [label="(...)", fillcolor="#C0C0C0"] ;
+88 -> 98 ;
+}
